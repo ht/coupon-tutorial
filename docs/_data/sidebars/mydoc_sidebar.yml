@@ -19,3 +19,15 @@ entries:
     - title: フォームを追加する
       url: /add_form.html
       output: web
+
+    - title: フォームを拡張する
+      url: /extend_form.html
+      output: web
+
+    - title: イベントで機能を拡張する
+      url: /extend_event.html
+      output: web
+
+    - title: イベントでテンプレートを拡張する
+      url: /extend_template.html
+      output: web
