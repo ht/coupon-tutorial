@@ -15,3 +15,7 @@ entries:
     - title: 画面を追加する
       url: /add_route.html
       output: web
+
+    - title: フォームを追加する
+      url: /add_form.html
+      output: web
