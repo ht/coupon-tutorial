@@ -7,13 +7,13 @@ permalink: extend_template.html
 folder: eccube
 ---
 
-*イベントについては[イベントで機能を拡張する](/extend_event.html)を参照して下さい。*
+*イベントについては[イベントで機能を拡張する]({{site.baseurl}}/extend_event.html)を参照して下さい。*
 
 EC-CUBE3でテンプレートをイベントで拡張する主な方法は2つあります。
 
 ## テンプレート描画イベントで拡張する
 
-[テンプレート描画イベント](/extend_event.html#section-5)では、twig描画前のソースに対して拡張が可能です。
+[テンプレート描画イベント]({{site.baseurl}}/extend_event.html#section-5)では、twig描画前のソースに対して拡張が可能です。
 
 ### 実装方法
 
