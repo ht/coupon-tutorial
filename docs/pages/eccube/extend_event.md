@@ -138,7 +138,7 @@ if ($event->hasArgument('TargetOrder')) {
 
 イベント名にテンプレート名を指定すると、そのテンプレートの描画前のタイミングで処理を差し込むことが可能です。
 
-テンプレートの拡張については[イベントでテンプレートを拡張する](/extend_template.html)を参照して下さい。
+テンプレートの拡張については[イベントでテンプレートを拡張する]({{site.baseurl}}/extend_template.html)を参照して下さい。
 
 event.yml[](https://github.com/izayoi256/coupon-tutorial/blob/2.0.0/event.yml){:target="_blank"}
 

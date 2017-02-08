@@ -58,7 +58,7 @@ $app['form.type.extensions'] = $app->share($app->extend('form.type.extensions', 
 ### イベントで拡張する
 
 EC-CUBE3で用意されているイベントで拡張できる場合があります。
-イベントについては[イベントで機能を拡張する](/extend_event.html)を参照して下さい。
+イベントについては[イベントで機能を拡張する]({{site.baseurl}}/extend_event.html)を参照して下さい。
 
 config.yml
 
@@ -95,7 +95,7 @@ $builder->add('field_name', 'text');
 ```
 
 フィールドを追加しただけでは画面に表示されません。
-テンプレートを拡張する方法は[イベントでテンプレートを拡張する](/extend_template.html)を参照して下さい。
+テンプレートを拡張する方法は[イベントでテンプレートを拡張する]({{site.baseurl}}/extend_template.html)を参照して下さい。
 
 ``` php
 <?php
