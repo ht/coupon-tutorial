@@ -88,21 +88,8 @@ hello.%name%: "Hello %name%!"
 $app->trans('hello.%name%', array('%name%' => 'World'));
 ```
 
-## 【番外編】ブラウザによるポップアップのエラーメッセージを変更する
+## ブラウザによるポップアップのエラーメッセージ
 
 {% include image.html file="browser_popup.png" %}
 
-上図のメッセージはEC-CUBEではなくブラウザの実装によるものです。
-
-メッセージを変更するにはJavaScriptを利用する必要があります。
-
-``` js
-var input = document.getElementById('order_name_name01');
-input.addEventListener('input', function () {
-    if (!input.value.length) {
-        input.setCustomValidity('invalid!');
-    } else {
-        input.setCustomValidity('');
-    }
-});
-```
+上図のメッセージはEC-CUBEではなくブラウザの実装によるものです。EC-CUBE側では変更できません。
