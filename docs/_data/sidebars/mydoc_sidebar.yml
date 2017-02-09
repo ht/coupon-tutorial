@@ -24,6 +24,14 @@ entries:
       url: /extend_form.html
       output: web
 
+    - title: バリデーションを設定する
+      url: /validation.html
+      output: web
+
+    - title: メッセージを設定する
+      url: /message.html
+      output: web
+
     - title: イベントで機能を拡張する
       url: /extend_event.html
       output: web
