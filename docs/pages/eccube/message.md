@@ -92,4 +92,27 @@ $app->trans('hello.%name%', array('%name%' => 'World'));
 
 {% include image.html file="browser_popup.png" %}
 
-上図のメッセージはEC-CUBEではなくブラウザの実装によるものです。EC-CUBE側では変更できません。
+上図のメッセージはEC-CUBEではなくブラウザの実装によるもので、required属性が指定されたinput要素に表示されます。
+
+フォームに下記のオプションを設定することで、required属性を付与することが可能です。
+
+Form/Type/CouponType.php[](https://github.com/izayoi256/coupon-tutorial/blob/2.0.0/Form/Type/CouponType.php#L56){:target="_blank"}
+
+``` php
+<?php
+        $builder
+            ->add('coupon_cd', 'text', array(
+
+                // requiredにtrueを指定することで、required属性を付与します
+                'required' => true,
+
+                // required属性はあくまで画面上の制御を行なうのみで、
+                // 開発ツール等で属性を消すと送信できてしまいます。
+                // NotBlankバリデーションを忘れないようにしましょう。
+                'constraints' => array(
+                    new Assert\NotBlank(),
+                ),
+            ))
+```
+
+なおrequired属性によるエラーメッセージはEC-CUBE側では変更できません。
