@@ -100,19 +100,30 @@ Form/Type/CouponType.php[](https://github.com/izayoi256/coupon-tutorial/blob/2.0
 
 ``` php
 <?php
-        $builder
-            ->add('coupon_cd', 'text', array(
+$builder
+    ->add('coupon_cd', 'text', array(
 
-                // requiredにtrueを指定することで、required属性を付与します
-                'required' => true,
+        // requiredにtrueを指定することで、required属性を付与します
+        'required' => true,
 
-                // required属性はあくまで画面上の制御を行なうのみで、
-                // 開発ツール等で属性を消すと送信できてしまいます。
-                // NotBlankバリデーションを忘れないようにしましょう。
-                'constraints' => array(
-                    new Assert\NotBlank(),
-                ),
-            ))
+        // required属性はあくまで画面上の制御を行なうのみで、
+        // 開発ツール等で属性を消すと送信できてしまいます。
+        // NotBlankバリデーションを忘れないようにしましょう。
+        'constraints' => array(
+            new Assert\NotBlank(),
+        ),
+    ))
 ```
 
-なおrequired属性によるエラーメッセージはEC-CUBE側では変更できません。
+なおrequired属性によるエラーメッセージはEC-CUBE側では変更できず、JavaScriptを利用する必要があります。
+
+``` js
+var input = document.getElementById('field_id');
+input.addEventListener('input', function () {
+    if (!input.value.length) {
+        input.setCustomValidity('invalid!');
+    } else {
+        input.setCustomValidity('');
+    }
+});
+```
